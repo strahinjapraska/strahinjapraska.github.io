@@ -21,11 +21,11 @@ $\ket{\psi_0} = \ket{0}^{\otimes n} \ket{0}^{\otimes n}$
 
 After applying Hadamard to the first $n$ qubits: 
 
-$\ket{\psi_1} = H^{\otimes n}(\ket{0}^{\otimes n})\ket{0}^{\otimes n} = (\frac{1}{\sqrt{2^n}} \sum_{x \in \{0, 1\}^n}\ket{x})\ket{0}^{\otimes n}$
+$\ket{\psi_1} = H^{\otimes n}(\ket{0}^{\otimes n})\ket{0}^{\otimes n} = (\frac{1}{\sqrt{2^n}} \sum_{x \in \mathbb{Z}_2^n}\ket{x})\ket{0}^{\otimes n}$
 
 We then query $f$ using XOR oracle: 
 
-$\ket{\psi_2} =(\frac{1}{\sqrt{2^n}} \sum_{x \in \{0, 1\}^n}\ket{x})\ket{f(x)}$
+$\ket{\psi_2} =(\frac{1}{\sqrt{2^n}} \sum_{x \in \mathbb{Z}_2^n}\ket{x})\ket{f(x)}$
 
 Now here is the first difference to the regular Simon's problem, we measure answer bits, in regular Simon's problem we would be left with state 
 
