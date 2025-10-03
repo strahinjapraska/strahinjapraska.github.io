@@ -35,9 +35,9 @@ Now here is the first difference to the regular Simon's problem, we measure answ
 
 $$\frac{\ket{x} + \ket{y}}{\sqrt{2}} = \frac{\ket{x \oplus 0} + \ket{x \oplus s}}{\sqrt{2}}$$ 
 
-In other words, when we measure $w$ it coincides with two values, $0$ and $s$, now we just generalize this for all $v \in V$ and we shouldn't forget to normalize by $\|V\|$ since that's how many such $v$ there are, i.e.
+In other words, when we measure $w$ it coincides with two values, $0$ and $s$, now we just generalize this for all $v \in V$ and we shouldn't forget to normalize by $\lvert V \rvert$ since that's how many such $v$ there are, i.e.
 
-$\ket{\psi_3} = \frac{1}{\sqrt{\|V\|}} \displaystyle \sum_{v \in V}\ket{x \oplus v}$  
+$\ket{\psi_3} = \frac{1}{\sqrt{\lvert V \rvert}} \displaystyle \sum_{v \in V}\ket{x \oplus v}$  
 
 Now we apply Hadamard again: 
 
