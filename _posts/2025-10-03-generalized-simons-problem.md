@@ -41,4 +41,12 @@ $\ket{\psi_3} = \frac{1}{\sqrt{\lvert V \rvert}} \displaystyle \sum_{v \in V}\ke
 
 Now we apply Hadamard again: 
 
+$$
+\begin{align}
+    \ket{\psi_4} &= H^{\otimes n}(\frac{1}{\lvert V \rvert} \sum_{v \in V} \ket{x \oplus v}) \\
+                 &= \frac{1}{\sqrt{\lvert V \rvert}} \frac{1}{\sqrt{2^n}}  \sum_{z \in \mathbb{Z}_2^n}\sum_{v \in V}(-1)^{(x \oplus v) \cdot z}\ket{z} \\ 
+                &= \frac{1}{\sqrt{\lvert V \rvert}} \frac{1}{\sqrt{2^n}}  \sum_{z \in \mathbb{Z}_2^n}\sum_{v \in V}(-1)^{x \cdot z}(-1)^{v \cdot z}\ket{z} \\ 
+                 &= \frac{1}{\sqrt{\lvert V \rvert}} \frac{1}{\sqrt{2^n}} \sum_{z \in \mathbb{Z}_2^n} (-1)^{x \cdot z}\sum_{v \in V}(-1)^{v \cdot z}\ket{z}
+\end{align} 
+$$ 
 
