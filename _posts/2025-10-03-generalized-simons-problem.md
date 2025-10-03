@@ -3,9 +3,11 @@
 The motivation to write this blog was because of the lack of resources on this topic that are accessible and solved in a way the "regular" [Simon's problem](https://en.wikipedia.org/wiki/Simon%27s_problem) is usually solved. Knowledge about the regular Simon's problem is assumed. 
 
 ## Problem Statement 
-Given some unknown function $f: \mathbb{Z}_2^n \mapsto X$, where X is a finite set, and a positive integer $k<n$. 
+Given some unknown function $f: \mathbb{Z}_2^n \mapsto X$, where $X$ is a finite set, and a positive integer $k<n$. 
 
 There exists an unknown subgroup $V \leq \mathbb{Z}_2^n$ of rank $k$ such that for any $x, y \in \mathbb{Z}^n_2, f(x) = f(y)$ iff $x \oplus y \in V$
+
+Goal is to find $V$
 
 Regular Simon's problem is a special case where $V =$ \{ 0, s \}. 
 
