@@ -17,7 +17,7 @@ The quantum algorithm is given in the Figure 1.
 
 <img width="827" height="278" alt="The-quantum-circuit-of-Simons-algorithm-The-measurement-in-the-dotted-box-could-be" src="https://github.com/user-attachments/assets/95bbd475-2f0e-4826-88b4-5552e23b4df9" />
 
-**Figure 1.** Taken from https://www.researchgate.net/figure/The-quantum-circuit-of-Simons-algorithm-The-measurement-in-the-dotted-box-could-be_fig12_350180612
+**Figure 1.** Taken from [https://www.researchgate.net/figure/The-quantum-circuit-of-Simons-algorithm-The-measurement-in-the-dotted-box-could-be_fig12_350180612](https://www.researchgate.net/figure/The-quantum-circuit-of-Simons-algorithm-The-measurement-in-the-dotted-box-could-be_fig12_350180612)
 
 We start with the state: 
 
@@ -33,10 +33,12 @@ $\ket{\psi_2} =(\frac{1}{\sqrt{2^n}} \displaystyle \sum_{x \in \mathbb{Z}_2^n}\k
 
 Now here is the first difference to the regular Simon's problem, we measure answer bits, in regular Simon's problem we would be left with state 
 
-$$\frac{\ket{x} + \ket{y}}{\sqrt{2}}$$
+$$\frac{\ket{x} + \ket{y}}{\sqrt{2}} = \frac{\ket{x \oplus 0} + \ket{x \oplus s}}{\sqrt{2}}$$ 
 
+In other words, when we measure $w$ it coincides with two values, $0$ and $s$, now we just generalize this for all $v \in V$ and we shouldn't forget to normalize by $|V|$ since that's how many such $v$ there are, i.e.
 
-$\ket{\psi_3} =$ 
+$\ket{\psi_3} = \frac{1}{\sqrt{|V|}} \displaystyle \sum_{v \in V}\ket{x \oplus v}$  
 
+Now we apply Hadamard again: 
 
 
