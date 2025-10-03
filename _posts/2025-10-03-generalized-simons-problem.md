@@ -13,9 +13,11 @@ Regular Simon's problem is a special case where $V =$ \{ 0, s \}.
 
 
 ## Quantum Algorithm 
-The quantum algorithm is given in the following figure. 
+The quantum algorithm is given in the Figure 1. 
 
 <img width="827" height="278" alt="The-quantum-circuit-of-Simons-algorithm-The-measurement-in-the-dotted-box-could-be" src="https://github.com/user-attachments/assets/95bbd475-2f0e-4826-88b4-5552e23b4df9" />
+
+**Figure 1.** Taken from https://www.researchgate.net/figure/The-quantum-circuit-of-Simons-algorithm-The-measurement-in-the-dotted-box-could-be_fig12_350180612
 
 We start with the state: 
 
