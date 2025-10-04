@@ -1,6 +1,6 @@
 # Generalized Simon's Problem
-
-The motivation to write this blog was because of the lack of resources on this topic that are accessible and solved in a way the "regular" [Simon's problem](https://en.wikipedia.org/wiki/Simon%27s_problem) is usually solved. Knowledge about the regular Simon's problem is assumed. 
+ 
+The motivation for writing this blog was the lack of accessible resources on this topic that present solutions in the similar way as the 'regular' [Simon's problem](https://en.wikipedia.org/wiki/Simon%27s_problem). Knowledge about the regular Simon's problem and some abstract algebra is assumed. 
 
 ## Problem Statement 
 Given some unknown function $f: \mathbb{Z}_2^n \mapsto X$, where $X$ is a finite set, and a positive integer $k<n$. 
@@ -51,4 +51,34 @@ $$
                  &= \frac{1}{\sqrt{\lvert V \rvert}} \frac{1}{\sqrt{2^n}} \sum_{z \in \mathbb{Z}_2^n} (-1)^{x \cdot z}\sum_{v \in V}(-1)^{v \cdot z}\ket{z}
 \end{align} 
 $$ 
+
+## Amplitude Analysis 
+For $z$ to be observed, we need a non-zero amplitude, and the most important part is to analyse what happens to the $\sum_{v \in V}(-1)^{v \cdot z}$ term. Let's denote it by $S(z)$. We consider the following two cases 
+1. $z \in V^\bot = \\{z \in \mathbb{Z}^n_2 \lvert, \lvert z \cdot i = 0 \forall v \in V  \\}$, i.e. $z$ is orthogonal to every vector in $v$ 
+2. $z \notin V^\bot$, which means that there are some $v$ for which $z \cdot v = 1$
+
+In the first case above, this would mean that every $(-1)^{z \cdot v} = (-1)^0$, so we would add up $\lvert V \rvert$ ones, so $S(z) = \lvert V |rvert$ 
+
+Now what we are interested is how many of the $v$ there are such that $z \cdot v = 1$, as we would like not to be in a case where we have for example $(-1)^1 + (-1)^0 + (-1)^1$, we would like to show that they all cancel out.  
+
+Let us consider the mapping $f_z: V \mapsto \mathbb{Z}_2$ defined as $f_z(v) = z \cdot v$. This mapping is a homomorphism. 
+$$f(u \oplus v) = z \cdot (u \oplus v) = z \cdot u \oplus z \cdot v = f(u) \oplus f(v)$$
+
+Now the kernel of this mapping $K = ker(f) = \\{ v \in V \lvert z \cdot v = 0 \\}$. 
+
+**Theorem 1(First Isomorphism Theorem)** Let $G$ and $H$ be groups, and let $G \mapsto H$ be a homomorphism. Then 
+
+$$G/ker(f) \cong Im(f)$$ 
+
+Now, if we apply **Theorem 1** tour our setting: 
+
+$$V/ker(f) \cong Im(f) = \mathbb{Z}_2$$
+
+$V/ker(f)$ is a **quotient group**, I won't go too much into details, there is an awesome [blog](https://www.math3ma.com/blog/the-first-isomorphism-theorem-intuitively) about quotient groups and First Isomorphism Theorem, but quotient group basically represents **all** of the cosets of $ker(f)$ in V.   
+
+Since $V/ker(f) \cong  \mathbb{Z}_2 \implies \lvert V/ker(f) \rvert = \lvert \mathbb{Z}_2 \rvert = 2$. So, there are only two cosets, and a fact from abstract algebra is that the cosets **paritition** the group V and that all the cosets are of the same size. 
+
+<img width="715" height="508" alt="Untitled-2025-10-04-1415" src="https://github.com/user-attachments/assets/a5ebf8bc-ae58-4f0e-8c66-b56e95a03ee2" />
+
+This means that the half of them will have property that $z \cdot v = 1$ and half of them will have $z \cdot v = 0$ . Which means that there are equal number $-1$ and $1$ terms in our sum $\implies S(z) = 0$. 
 
