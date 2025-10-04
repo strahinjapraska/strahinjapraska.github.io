@@ -57,7 +57,7 @@ For $z$ to be observed, we need a non-zero amplitude, and the most important par
 1. $z \in V^\bot = \\{z \in \mathbb{Z}^n_2 \lvert, \lvert z \cdot i = 0 \forall v \in V  \\}$, i.e. $z$ is orthogonal to every vector in $v$ 
 2. $z \notin V^\bot$, which means that there are some $v$ for which $z \cdot v = 1$
 
-In the first case above, this would mean that every $(-1)^{z \cdot v} = (-1)^0$, so we would add up $\lvert V \rvert$ ones, so $S(z) = \lvert V |rvert$ 
+In the first case above, this would mean that every $(-1)^{z \cdot v} = (-1)^0$, so we would add up $\lvert V \rvert$ ones, so $S(z) = \lvert V \rvert$ 
 
 Now what we are interested is how many of the $v$ there are such that $z \cdot v = 1$, as we would like not to be in a case where we have for example $(-1)^1 + (-1)^0 + (-1)^1$, we would like to show that they all cancel out.  
 
