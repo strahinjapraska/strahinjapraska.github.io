@@ -59,7 +59,7 @@ For $z$ to be observed, we need a non-zero amplitude, and the most important par
 
 In the first case above, this would mean that every $(-1)^{z \cdot v} = (-1)^0$, so we would add up $\lvert V \rvert$ ones, so $S(z) = \lvert V \rvert$ 
 
-Now what we are interested is how many of the $v$ there are such that $z \cdot v = 1$, as we would like not to be in a case where we have for example $(-1)^1 + (-1)^0 + (-1)^1$, we would like to show that they all cancel out.  
+Now, what we are interested is how many of the $v$ there are such that $z \cdot v = 1$, because we would like to avoid for example a sum $(-1)^1 + (-1)^0 + (-1)^1$ that has non-zero amplitude. We would like to show that they all cancel out.  
 
 Let us consider the mapping $f_z: V \mapsto \mathbb{Z}_2$ defined as $f_z(v) = z \cdot v$. This mapping is a homomorphism. 
 $$f(u \oplus v) = z \cdot (u \oplus v) = z \cdot u \oplus z \cdot v = f(u) \oplus f(v)$$
