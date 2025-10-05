@@ -63,7 +63,7 @@ for(int i = 0; i < W_len; ++i){
 ## Summation
 Now, in order to get $W \cdot x+ b$, we need to put the values of $W_1 \cdot x$ and $W_2 \cdot x$ into the second and third slot and add them up with $b$. We do this by (right)rotating the $W_1 \cdot x$ by `1` and rotating $W_2 \cdot x$ by $2$ and adding them up with $W_0 \cdot x$.  Visually, 
 
-![[sum2.drawio.png]]
+<img width="681" height="321" alt="sum" src="https://github.com/user-attachments/assets/be9e9587-77d0-4661-b777-7efbd5aa8fab" />
 
 In code: 
 ```c++
